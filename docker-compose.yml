@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: digital-stamp-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-Nilu@2004}
+      MYSQL_DATABASE: digital_stamp
+    ports:
+      - "3306:3306"
+    volumes:
+      - digital_stamp_mysql:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+volumes:
+  digital_stamp_mysql:
