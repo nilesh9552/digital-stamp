@@ -42,7 +42,7 @@ app:
     refresh-expiration-ms: ${JWT_REFRESH_EXPIRATION_MS:604800000}
 
   cors:
-    origins: ${CORS_ORIGINS:http://localhost:5173,http://192.168.1.201:5173,http://localhost:3000}
+    origins: ${CORS_ORIGINS:https://localhost:5174,https://digital-stamp.local:5174}
 
   upload-dir: ${APP_UPLOAD_DIR:uploads}
   seed: ${APP_SEED:true}

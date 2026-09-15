@@ -11,17 +11,18 @@ export default defineConfig({
 
     https: {
       key: fs.readFileSync(
-        path.resolve(__dirname, '../certs/172.16.25.138+2-key.pem')
+        path.resolve(__dirname, '../certs/digital-stamp-key.pem')
       ),
       cert: fs.readFileSync(
-        path.resolve(__dirname, '../certs/172.16.25.138+2.pem')
+        path.resolve(__dirname, '../certs/digital-stamp.pem')
       ),
     },
 
     proxy: {
       '/api': {
         target: 'https://localhost:8080',
-          secure: false,
+        changeOrigin: true,
+        secure: false,
       },
     },
   },
