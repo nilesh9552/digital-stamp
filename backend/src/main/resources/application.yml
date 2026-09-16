@@ -41,8 +41,9 @@ app:
     access-expiration-ms: ${JWT_ACCESS_EXPIRATION_MS:900000}
     refresh-expiration-ms: ${JWT_REFRESH_EXPIRATION_MS:604800000}
 
+ 
   cors:
-    origins: ${CORS_ORIGINS:https://localhost:5174,https://digital-stamp.local:5174}
+    origins: ${CORS_ORIGINS:https://localhost:5173,https://digital-stamp.local:5173,https://localhost:5174,https://digital-stamp.local:5174}
 
   upload-dir: ${APP_UPLOAD_DIR:uploads}
   seed: ${APP_SEED:true}
