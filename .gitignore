@@ -38,3 +38,5 @@ backend/test-output/
 
 certs/
 *.p12
+/backend/src/main/resources/application.yml
+/backend/src/main/resources/application.yml.save
